@@ -32,7 +32,15 @@
     <script>
       // Replace the <textarea id="editor1"> with a CKEditor
       // instance, using default configuration.
-      CKEDITOR.replace( 'editor1' );
+      var editor = CKEDITOR.replace( 'editor1', {
+        language: 'zh-cn',
+        skin: 'minimalist'
+      });
+      
+      editor.on( 'change', function( evt ) {
+        // getData() returns CKEditor's HTML content.
+        console.log( 'Total bytes: ' + evt.editor.getData().length );
+      });
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
