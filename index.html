@@ -27,35 +27,37 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
 
     <!-- build:js(.) scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="./bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
 
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-    <script type="text/javascript" charset="utf-8" src="scripts/ueditor/ueditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="scripts/ueditor/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.min.js"> </script>
     <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
     <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
-    <script type="text/javascript" charset="utf-8" src="scripts/ueditor/lang/zh-cn/zh-cn.js"></script>
-
+    <script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript">
+      var ue = UE.getEditor('container');
+    </script>
 
     <!-- endbuild -->
 
