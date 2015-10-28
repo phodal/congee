@@ -1,5 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
   <title>congee</title>
@@ -21,21 +21,14 @@
 <body>
 
 <textarea name="editor1" id="editor1" rows="10" cols="80">
-            This is my textarea to be replaced with CKEditor.
-  </textarea>
+    在这输入
+</textarea>
 
 <script src="./bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="ckeditor/ckeditor.js"></script>
-<script type="text/javascript" charset="utf-8" src="zeroclipboard/ZeroClipboard.js"></script>
+<script type="text/javascript" charset="utf-8" src="ckeditor/config.js"></script>
 <script>
-    var editor = CKEDITOR.replace('editor1', {
-        allowedContent: true
-    });
-
-    editor.config.forcePasteAsPlainText = false;
-    CKEDITOR.config.allowedContent = true;
-    editor.config.pasteFromWordRemoveFontStyles = false;
-    editor.config.pasteFromWordRemoveStyles = false;
+    var editor = CKEDITOR.replace('editor1', {});
 
     editor.on('change', function (evt) {
         // getData() returns CKEditor's HTML content.

@@ -7,6 +7,12 @@ CKEDITOR.editorConfig = function (config) {
     config.allowedContent = true;
     config.language = 'zh-cn';
     config.skin = 'minimalist';
+    config.pasteFilter = null;
+    config.forcePasteAsPlainText = false;
+    config.allowedContent = true;
+    config.pasteFromWordRemoveFontStyles = false;
+    config.pasteFromWordRemoveStyles = false;
+
     config.toolbar = [
         {name: 'document', items: ['Source', '-', 'Save', 'NewPage', 'DocProps', 'Preview', 'Print', '-', 'Templates']},
         {name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
