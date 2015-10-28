@@ -27,7 +27,6 @@
 </form>
 
 <script src="./bower_components/jquery/dist/jquery.js"></script>
-<script src="scripts/main.js"></script>
 <script type="text/javascript" charset="utf-8" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript" charset="utf-8" src="zeroclipboard/ZeroClipboard.js"></script>
 <script>
@@ -66,9 +65,18 @@
     ]
   });
 
+  editor.config.forcePasteAsPlainText = false;
   editor.on('change', function (evt) {
     // getData() returns CKEditor's HTML content.
     console.log('Total bytes: ' + evt.editor.getData().length);
+  });
+
+  editor.on('instanceReady', function(ev) {
+    ev.editor.on('paste', function(evt) {
+      // Update the text
+      console.log(evt);
+      evt.editor.setData(evt.editor.getData() + ' your additional comments.');
+    }, editor.element.$);
   });
 </script>
 
