@@ -12,7 +12,7 @@ CKEDITOR.editorConfig = function (config) {
     config.allowedContent = true;
     config.pasteFromWordRemoveFontStyles = false;
     config.pasteFromWordRemoveStyles = false;
-    config.extraPlugins = 'floating-tools';
+    config.extraPlugins = 'floating-tools,notification,autosave,templates';
 
 
   config.toolbar = [
