@@ -1,0 +1,13 @@
+body {
+    width: 100%;
+}
+
+#styles {
+    width: 50%;
+    float: left;
+}
+
+#editor {
+    float: right;
+    width: 50%;
+}
