@@ -20,64 +20,34 @@
 </head>
 <body>
 
-<form>
-      <textarea name="editor1" id="editor1" rows="10" cols="80">
-                This is my textarea to be replaced with CKEditor.
-      </textarea>
-</form>
+<textarea name="editor1" id="editor1" rows="10" cols="80">
+            This is my textarea to be replaced with CKEditor.
+  </textarea>
 
 <script src="./bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" charset="utf-8" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript" charset="utf-8" src="zeroclipboard/ZeroClipboard.js"></script>
 <script>
-  // Replace the <textarea id="editor1"> with a CKEditor
-  // instance, using default configuration.
-  var editor = CKEDITOR.replace('editor1', {
-    language: 'zh-cn',
-    skin: 'minimalist',
-    toolbar: [
-      {name: 'document', items: ['Source', '-', 'Save', 'NewPage', 'DocProps', 'Preview', 'Print', '-', 'Templates']},
-      {name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
-      {name: 'editing', items: ['Find', 'Replace', '-', 'SelectAll', '-', 'SpellChecker', 'Scayt']},
-      {
-        name: 'forms', items: ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
-        'HiddenField']
-      },
-      '/',
-      {
-        name: 'basicstyles',
-        items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']
-      },
-      {
-        name: 'paragraph',
-        items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv',
-          '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl']
-      },
-      {name: 'links', items: ['Link', 'Unlink', 'Anchor']},
-      {
-        name: 'insert',
-        items: ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']
-      },
-      '/',
-      {name: 'styles', items: ['Styles', 'Format', 'Font', 'FontSize']},
-      {name: 'colors', items: ['TextColor', 'BGColor']},
-      {name: 'tools', items: ['Maximize', 'ShowBlocks', '-', 'About']}
-    ]
-  });
+    var editor = CKEDITOR.replace('editor1', {
+        allowedContent: true
+    });
 
-  editor.config.forcePasteAsPlainText = false;
-  editor.on('change', function (evt) {
-    // getData() returns CKEditor's HTML content.
-    console.log('Total bytes: ' + evt.editor.getData().length);
-  });
+    editor.config.forcePasteAsPlainText = false;
+    CKEDITOR.config.allowedContent = true;
+    editor.config.pasteFromWordRemoveFontStyles = false;
+    editor.config.pasteFromWordRemoveStyles = false;
 
-  editor.on('instanceReady', function(ev) {
-    ev.editor.on('paste', function(evt) {
-      // Update the text
-      console.log(evt);
-      evt.editor.setData(evt.editor.getData() + ' your additional comments.');
-    }, editor.element.$);
-  });
+    editor.on('change', function (evt) {
+        // getData() returns CKEditor's HTML content.
+        console.log('Total bytes: ' + evt.editor.getData().length);
+    });
+
+    editor.on('instanceReady', function (ev) {
+        ev.editor.on('paste', function (evt) {
+            // Update the text
+            console.log(evt.data);
+        });
+    });
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
