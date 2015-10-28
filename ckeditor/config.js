@@ -13,8 +13,11 @@ CKEDITOR.editorConfig = function (config) {
     config.pasteFromWordRemoveFontStyles = false;
     config.pasteFromWordRemoveStyles = false;
     config.extraPlugins = 'floating-tools';
+    config.extraPlugins = 'autosave';
+    config.extraPlugins = 'notification';
 
-    config.toolbar = [
+
+  config.toolbar = [
         {name: 'document', items: ['Source', '-', 'Save', 'NewPage', 'DocProps', 'Preview', 'Print', '-', 'Templates']},
         {name: 'clipboard', items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
         {name: 'editing', items: ['Find', 'Replace', '-', 'SelectAll', '-', 'SpellChecker', 'Scayt']},
