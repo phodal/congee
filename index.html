@@ -17,41 +17,46 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="scripts/libs/jquery.pwstabs.min.css">
   <!-- endbuild -->
 
 <script type="text/javascript" charset="utf-8" src="scripts/libs/dust-full.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="scripts/libs/dust-helpers.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.mixitup.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.pwstabs.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript" charset="utf-8" src="ckeditor/config.js"></script>
 </head>
 <body>
 
-<p id="output">test</p>
-<script type="text/dust" id="hello"><div class="{world}">Hello, {world}</script>
-<script type="text/javascript">
-  var src = document.getElementById('hello').textContent;
-  // Compile the template under the name 'hello'
-  var compiled = dust.compile(src, 'hello');
-  // Register the template with Dust
-  dust.loadSource(compiled);
-  // Render the template
-  dust.render('hello', { world: "Earth" }, function(err, out) {
-    // `out` contains the rendered output.
-    console.log(out);
-    document.getElementById('output').innerHTML = out;
-  });
-</script>
+<!--<p id="output">test</p>-->
+<!--<script type="text/dust" id="hello"><div class="{world}">Hello, {world}</script>-->
+<!--<script type="text/javascript">-->
+  <!--var src = document.getElementById('hello').textContent;-->
+  <!--// Compile the template under the name 'hello'-->
+  <!--var compiled = dust.compile(src, 'hello');-->
+  <!--// Register the template with Dust-->
+  <!--dust.loadSource(compiled);-->
+  <!--// Render the template-->
+  <!--dust.render('hello', { world: "Earth" }, function(err, out) {-->
+    <!--// `out` contains the rendered output.-->
+    <!--console.log(out);-->
+    <!--document.getElementById('output').innerHTML = out;-->
+  <!--});-->
+<!--</script>-->
 
-<div id="styles">
-    <button class="filter" data-filter="all">All</button>
-    <button class="filter" data-filter=".category-1">Category 1</button>
-    <button class="filter" data-filter=".category-2">Category 2</button>
-    <button class="sort" data-sort="my-order:asc">ASC</button>
-    <button class="sort" data-sort="my-order:desc">DESC</button>
-    <div id="Container" class="sandbox">
-          <div class="mix category-1" data-value="5" data-my-order="1" style="margin:1em auto;white-space: normal;border-style: none;text-align: center;">
+<div id="tabs">
+  <div class="tabset8 pws_tabs_list">
+    <div data-pws-tab="tab111" data-pws-tab-name="Tab 111">
+      <button class="filter" data-filter="all">All</button>
+      <button class="filter" data-filter=".category-1">Category 1</button>
+      <button class="filter" data-filter=".category-2">Category 2</button>
+      <button class="sort" data-sort="my-order:asc">ASC</button>
+      <button class="sort" data-sort="my-order:desc">DESC</button>
+      <div id="Container" class="sandbox">
+        <div class="mix category-1" data-value="5" data-my-order="1"
+             style="margin:1em auto;white-space: normal;border-style: none;text-align: center;">
           <span class="color" style="
             width: 100%;
             border-top: solid 1px #000000;
@@ -67,13 +72,19 @@
               font-size: 20px;"><p>标题</p></section>
           </span>
         </div>
-        <div class="mix category-1" data-value="5" data-my-order="2"> ... </div>
-        <div class="mix category-2" data-value="5" data-my-order="3"> ... </div>
-        <div class="mix category-2" data-value="5" data-my-order="4"> ... </div>
+        <div class="mix category-1" data-value="5" data-my-order="2"> ...</div>
+        <div class="mix category-2" data-value="5" data-my-order="3"> ...</div>
+        <div class="mix category-2" data-value="5" data-my-order="4"> ...</div>
+      </div>
     </div>
+    <div data-pws-tab="tab222" data-pws-tab-name="Tab 222">
+      test
+    </div>
+    <div data-pws-tab="tab333" data-pws-tab-name="Tab 333">
+      test
+    </div>
+  </div>
 </div>
-
-
 <div id="editor">
     <textarea name="congee" id="congee" rows="10" cols="80">
         在这输入
@@ -89,6 +100,12 @@
     });
 
     congee.on('instanceReady', function (ev) {
+      $('.tabset8').pwstabs({
+        effect: 'slideleft',
+        defaultTab: 1,
+        tabsPosition: 'vertical',
+        verticalPosition: 'left'
+      });
       $('#Container').mixItUp().on('click', '.mix', function(event){
         var template = $(event.currentTarget).html();
         congee.insertHtml(template);
