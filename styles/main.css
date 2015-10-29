@@ -6,10 +6,14 @@ body {
     float: left;
 }
 
-.tabset8,
 .pws_tabs_list {
   min-width: 512px;
+  min-height: 512px;  
   width:100%;
+}
+
+.pws_tabs_list {
+  padding-left: 0.2em ;
 }
 
 #editor {
