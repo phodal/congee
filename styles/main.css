@@ -3,8 +3,13 @@ body {
 }
 
 #tabs {
-    width: 50%;
     float: left;
+}
+
+.tabset8,
+.pws_tabs_list {
+  min-width: 512px;
+  width:100%;
 }
 
 #editor {

@@ -29,23 +29,6 @@
 <script type="text/javascript" charset="utf-8" src="ckeditor/config.js"></script>
 </head>
 <body>
-
-<!--<p id="output">test</p>-->
-<!--<script type="text/dust" id="hello"><div class="{world}">Hello, {world}</script>-->
-<!--<script type="text/javascript">-->
-  <!--var src = document.getElementById('hello').textContent;-->
-  <!--// Compile the template under the name 'hello'-->
-  <!--var compiled = dust.compile(src, 'hello');-->
-  <!--// Register the template with Dust-->
-  <!--dust.loadSource(compiled);-->
-  <!--// Render the template-->
-  <!--dust.render('hello', { world: "Earth" }, function(err, out) {-->
-    <!--// `out` contains the rendered output.-->
-    <!--console.log(out);-->
-    <!--document.getElementById('output').innerHTML = out;-->
-  <!--});-->
-<!--</script>-->
-
 <div id="tabs">
   <div class="tabset8 pws_tabs_list">
     <div data-pws-tab="tab111" data-pws-tab-name="Tab 111">
@@ -78,7 +61,22 @@
       </div>
     </div>
     <div data-pws-tab="tab222" data-pws-tab-name="Tab 222">
-      test
+      <p id="output"></p>
+      <script type="text/dust" id="hello"><div class="{world}">Hello, {world}</script>
+      <script type="text/javascript">
+        var src = document.getElementById('hello').textContent;
+        // Compile the template under the name 'hello'
+        var compiled = dust.compile(src, 'hello');
+        // Register the template with Dust
+        dust.loadSource(compiled);
+        // Render the template
+        dust.render('hello', { world: "Earth" }, function(err, out) {
+          // `out` contains the rendered output.
+          console.log(out);
+          document.getElementById('output').innerHTML = out;
+        });
+      </script>
+
     </div>
     <div data-pws-tab="tab333" data-pws-tab-name="Tab 333">
       test
