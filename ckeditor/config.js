@@ -12,7 +12,7 @@ CKEDITOR.editorConfig = function (config) {
     config.allowedContent = true;
     config.pasteFromWordRemoveFontStyles = false;
     config.pasteFromWordRemoveStyles = false;
-    config.extraPlugins = 'floating-tools,notification,autosave,templates';
+    config.extraPlugins = 'floating-tools,notification,autosave,templates,markdown';
     config.height = 637;
 
 
@@ -31,6 +31,6 @@ CKEDITOR.editorConfig = function (config) {
         '/',
         {name: 'styles', items: ['Format', 'Font', 'FontSize']},
         {name: 'colors', items: ['TextColor', 'BGColor']},
-        {name: 'tools', items: ['Maximize', 'ShowBlocks', 'Source']}
+        {name: 'tools', items: ['Maximize', 'ShowBlocks', 'Source', 'Markdown']}
     ];
 };
