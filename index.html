@@ -73,7 +73,10 @@
 
 <script>
     $(function(){
-        $('#Container').mixItUp();
+      $('#Container').mixItUp().on('click', '.mix', function(event){
+        var template = $(event.currentTarget).first().context.innerHTML;
+        console.log(template);
+      });
     });
 </script>
 
