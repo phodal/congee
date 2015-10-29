@@ -19,11 +19,28 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
+<script type="text/javascript" charset="utf-8" src="scripts/libs/dust-full.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/libs/dust-helpers.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.mixitup.min.js"></script>
-
 </head>
 <body>
+
+<p id="output">test</p>
+<script type="text/dust" id="hello"><div class="{world}">Hello, {world}</script>
+<script type="text/javascript">
+  var src = document.getElementById('hello').textContent;
+  // Compile the template under the name 'hello'
+  var compiled = dust.compile(src, 'hello');
+  // Register the template with Dust
+  dust.loadSource(compiled);
+  // Render the template
+  dust.render('hello', { world: "Earth" }, function(err, out) {
+    // `out` contains the rendered output.
+    console.log(out);
+    document.getElementById('output').innerHTML = out;
+  });
+</script>
 
 <div id="styles">
     <button class="filter" data-filter="all">All</button>
