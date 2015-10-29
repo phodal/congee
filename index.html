@@ -23,6 +23,8 @@
 <script type="text/javascript" charset="utf-8" src="scripts/libs/dust-helpers.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.mixitup.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="ckeditor/ckeditor.js"></script>
+<script type="text/javascript" charset="utf-8" src="ckeditor/config.js"></script>
 </head>
 <body>
 
@@ -71,36 +73,26 @@
     </div>
 </div>
 
-<script>
-    $(function(){
-      $('#Container').mixItUp().on('click', '.mix', function(event){
-        var template = $(event.currentTarget).first().context.innerHTML;
-        console.log(template);
-      });
-    });
-</script>
 
 <div id="editor">
-    <textarea name="editor1" id="editor1" rows="10" cols="80">
+    <textarea name="congee" id="congee" rows="10" cols="80">
         在这输入
     </textarea>
 </div>
 
-<script type="text/javascript" charset="utf-8" src="ckeditor/ckeditor.js"></script>
-<script type="text/javascript" charset="utf-8" src="ckeditor/config.js"></script>
 <script>
-    var editor = CKEDITOR.replace('editor1', {});
+    var congee = CKEDITOR.replace('congee', {});
 
-    editor.on('change', function (evt) {
+    congee.on('change', function (evt) {
         // getData() returns CKEditor's HTML content.
         console.log('Total bytes: ' + evt.editor.getData().length);
     });
 
-    editor.on('instanceReady', function (ev) {
-        ev.editor.on('paste', function (evt) {
-            // Update the text
-            console.log(evt.data);
-        });
+    congee.on('instanceReady', function (ev) {
+      $('#Container').mixItUp().on('click', '.mix', function(event){
+        var template = $(event.currentTarget).html();
+        congee.insertHtml(template);
+      });
     });
 </script>
 
