@@ -12,9 +12,27 @@ CKEDITOR.editorConfig = function (config) {
     config.allowedContent = true;
     config.pasteFromWordRemoveFontStyles = false;
     config.pasteFromWordRemoveStyles = false;
-    config.extraPlugins = 'floating-tools,notification,autosave,templates,markdown';
+    config.extraPlugins = 'floating-tools,notification,autosave,templates,markdown,wordcount';
     config.height = 637;
 
+
+    config.wordcount = {
+
+        // Whether or not you want to show the Paragraphs Count
+        showParagraphs: true,
+
+        // Whether or not you want to show the Word Count
+        showWordCount: true,
+
+        // Whether or not you want to show the Char Count
+        showCharCount: true,
+
+        // Whether or not you want to count Spaces as Chars
+        countSpacesAsChars: true,
+
+        // Whether or not to include Html chars in the Char Count
+        countHTML: true,
+    };
 
   config.toolbar = [
         {name: 'document', items: ['Preview', 'Templates']},
