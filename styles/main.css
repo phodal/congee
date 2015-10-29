@@ -11,3 +11,118 @@ body {
     float: right;
     width: 50%;
 }
+
+.sandbox {
+    background: #03899c;
+    position: relative;
+    min-height: 580px;
+    padding: 15px;
+    overflow: hidden;
+}
+.sandbox .mix {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.4);
+    margin-bottom: 4%;
+    display: none;
+    font-size: 25px;
+    padding-right: .5em;
+    line-height: 1.8em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    vertical-align: top;
+    -webkit-backface-visibility: hidden;
+}
+.sandbox .mix:before {
+    content: '';
+    display: inline-block;
+    padding-top: 60%;
+    vertical-align: middle;
+}
+.sandbox .mix:after {
+    content: '';
+    position: absolute;
+    border: 20px solid transparent;
+    border-right-color: white;
+    top: -20px;
+    left: -20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.sandbox .mix.category-1:after {
+    border-right-color: #6bd2e8;
+}
+.sandbox .mix.category-2:after {
+    border-right-color: #a6e6a7;
+}
+.sandbox .gap,
+.sandbox .mix {
+    width: 48%;
+}
+.sandbox.list .mix {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+}
+.sandbox.list .mix:before {
+    padding-top: 3%;
+}
+.sandbox.pagination {
+    min-height: 0;
+    background: #6bd2e8;
+    padding: 15px;
+}
+.sandbox.pagination .mix {
+    margin-bottom: 4%;
+    width: 48%;
+}
+.sandbox.pagination .mix:before {
+    padding-top: 45%;
+}
+.sandbox.pagination .mix.category-1:after {
+    border-right-color: #3fc5e1;
+}
+.sandbox.pagination .mix.category-2:after {
+    border-right-color: #92e094;
+}
+@media all and (min-width: 641px) {
+    .sandbox.pagination .mix {
+        width: 23.5%;
+        margin-bottom: 0;
+    }
+}
+@media all and (min-width: 769px) {
+    .sandbox.pagination {
+        padding: 30px;
+    }
+}
+
+@media all and (min-width: 641px) {
+    .sandbox .mix {
+        margin-bottom: 2%;
+    }
+    .sandbox .mix:before {
+        padding-top: 80%;
+    }
+    .sandbox .gap,
+    .sandbox .mix {
+        width: 23.5%;
+    }
+}
+@media all and (min-width: 769px) {
+    .sandbox {
+        padding: 30px 30px 0;
+    }
+    .sandbox .mix:before {
+        padding-top: 45%;
+    }
+    .sandbox .gap,
+    .sandbox .mix {
+        width: 23.5%;
+    }
+}

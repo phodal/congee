@@ -18,12 +18,27 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
+
+<script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.mixitup.min.js"></script>
+
 </head>
 <body>
 
 <div id="styles">
-
+    <div id="Container" class="sandbox">
+        <div class="mix category-1" data-value="5" data-my-order="1"> ... </div>
+        <div class="mix category-1" data-value="5" data-my-order="2"> ... </div>
+        <div class="mix category-2" data-value="5" data-my-order="3"> ... </div>
+        <div class="mix category-2" data-value="5" data-my-order="4"> ... </div>
+    </div>
 </div>
+
+<script>
+    $(function(){
+        $('#Container').mixItUp();
+    });
+</script>
 
 <div id="editor">
     <textarea name="editor1" id="editor1" rows="10" cols="80">
@@ -31,8 +46,6 @@
     </textarea>
 </div>
 
-<script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="scripts/libs/jquery.mixitup.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="ckeditor/ckeditor.js"></script>
 <script type="text/javascript" charset="utf-8" src="ckeditor/config.js"></script>
 <script>
