@@ -6,7 +6,7 @@
 CKEDITOR.editorConfig = function (config) {
     config.allowedContent = true;
     config.language = 'zh-cn';
-    config.skin = 'minimalist';
+    //config.skin = 'minimalist';
     config.pasteFilter = null;
     config.forcePasteAsPlainText = false;
     config.allowedContent = true;
@@ -31,7 +31,7 @@ CKEDITOR.editorConfig = function (config) {
         countSpacesAsChars: true,
 
         // Whether or not to include Html chars in the Char Count
-        countHTML: true,
+        countHTML: true
     };
 
   config.toolbar = [
