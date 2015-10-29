@@ -21,6 +21,10 @@ body {
     width: 50%;
 }
 
+button.active {
+  background-color: #888;
+}
+
 .sandbox {
     background: #03899c;
     position: relative;
