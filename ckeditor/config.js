@@ -12,7 +12,8 @@ CKEDITOR.editorConfig = function (config) {
     config.allowedContent = true;
     config.pasteFromWordRemoveFontStyles = false;
     config.pasteFromWordRemoveStyles = false;
-    config.extraPlugins = 'floating-tools,notification,autosave,templates,markdown,wordcount,clipboard,pastefromword';
+    config.extraPlugins = 'floating-tools,notification,autosave,templates,markdown,wordcount,' +
+      'clipboard,pastefromword,smiley';
     config.height = 637;
 
 
@@ -35,7 +36,7 @@ CKEDITOR.editorConfig = function (config) {
     };
 
   config.toolbar = [
-        {name: 'document', items: ['Preview', 'Templates']},
+        {name: 'document', items: ['Preview', 'Smiley']},
         {name: 'clipboard', items: ['Undo', 'Redo']},
         {
             name: 'basicstyles',
