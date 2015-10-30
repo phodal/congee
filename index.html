@@ -41,8 +41,15 @@
       <button class="sort" data-sort="my-order:asc">ASC</button>
       <button class="sort" data-sort="my-order:desc">DESC</button>
       <div id="Container" class="sandbox">
-        <div class="mix category-1" data-value="5" data-my-order="1"
-             style="margin:1em auto;white-space: normal;border-style: none;text-align: center;">
+        <div class="mix category-1" data-value="5" data-my-order="1"> <p id="output"></p></div>
+        <div class="mix category-1" data-value="5" data-my-order="2"> ...</div>
+        <div class="mix category-2" data-value="5" data-my-order="3"> ...</div>
+        <div class="mix category-2" data-value="5" data-my-order="4"> ...</div>
+      </div>
+    </div>
+    <div data-pws-tab="tab222" data-pws-tab-name="Tab 222">
+      <script type="text/dust" id="hello">
+        <div style="margin:1em auto;white-space: normal;border-style: none;text-align: center;">
           <div class="color" style="
             width: 100%;
             border-top: solid 1px #000000;
@@ -58,14 +65,7 @@
               font-size: 20px;"><p style="margin: 0 auto;">标题</p></section>
           </div>
         </div>
-        <div class="mix category-1" data-value="5" data-my-order="2"> ...</div>
-        <div class="mix category-2" data-value="5" data-my-order="3"> ...</div>
-        <div class="mix category-2" data-value="5" data-my-order="4"> ...</div>
-      </div>
-    </div>
-    <div data-pws-tab="tab222" data-pws-tab-name="Tab 222">
-      <p id="output"></p>
-      <script type="text/dust" id="hello"><div class="{world}">Hello, {world}</script>
+      </script>
       <script type="text/javascript">
         var src = document.getElementById('hello').textContent;
         // Compile the template under the name 'hello'
