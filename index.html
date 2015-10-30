@@ -43,7 +43,7 @@
       <div id="Container" class="sandbox">
         <div class="mix category-1" data-value="5" data-my-order="1"
              style="margin:1em auto;white-space: normal;border-style: none;text-align: center;">
-          <span class="color" style="
+          <div class="color" style="
             width: 100%;
             border-top: solid 1px #000000;
             display: inline-block;">
@@ -55,8 +55,8 @@
               border-bottom-left-radius: 10px;
               padding: 5px 10px;
               border-bottom-right-radius: 10px;
-              font-size: 20px;"><p>标题</p></section>
-          </span>
+              font-size: 20px;"><p style="margin: 0 auto;">标题</p></section>
+          </div>
         </div>
         <div class="mix category-1" data-value="5" data-my-order="2"> ...</div>
         <div class="mix category-2" data-value="5" data-my-order="3"> ...</div>
@@ -109,6 +109,7 @@
       });
       $('#Container').mixItUp().on('click', '.mix', function(event){
         var template = $(event.currentTarget).html();
+        console.log(template);
         congee.insertHtml(template);
       });
     });
