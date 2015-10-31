@@ -9,6 +9,10 @@ span.cke_combo_text,
   color: #34495e;
 }
 
+.button, button {
+  padding: 0 20px;
+}
+
 #tabs {
   float: left;
   width: 50%;
@@ -89,7 +93,7 @@ button.active {
   content: '';
   position: absolute;
   border: 20px solid transparent;
-  border-right-color: white;
+  border-right-color: #16a085;
   top: -20px;
   left: -20px;
   -webkit-transform: rotate(45deg);
