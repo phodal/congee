@@ -9,7 +9,8 @@
     "lodash": "~3.10.1",
     "ractive": "~0.7.3",
     "rv": "~0.1.8",
-    "amplify": "~1.1.2"
+    "amplify": "~1.1.2",
+    "spectrum": "~1.7.1"
   },
   "overrides": {
     "bootstrap-sass": {
