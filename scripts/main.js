@@ -40,6 +40,8 @@ require.config({
 require([ 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.request'], function (Ractive, init, config, amplify) {
   'use strict';
   init();
+  var appConfig = config;
+  var globalColor = "#000";
 
   amplify.request.define( "getTitle", "ajax", {
     url: "./views/titles/hello.html",
@@ -51,7 +53,24 @@ require([ 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.reque
     var ractive = new Ractive({
       el: 'hello',
       template: data,
-      data: { color: config.defaultColor, "fontSize": config.defaultFontSize }
+      data: { color: appConfig.defaultColor, "fontSize": appConfig.defaultFontSize }
+    });
+
+    ractive.on('changeGlobalColor', function() {
+      console.log("=============")
     });
   });
+
+  var colors = new Ractive({
+    el: 'colors',
+    template: '<input placeholder="Type your name" value="{{globalColor}}">',
+    data: {globalColor: globalColor}
+  });
+
+  colors.observe( 'globalColor', function ( newValue ) {
+    console.log(newValue);
+    appConfig.defaultColor = newValue;
+    this.fire('changeGlobalColor');
+  });
+
 });
