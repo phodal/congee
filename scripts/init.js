@@ -18,7 +18,7 @@ define(['ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function() 
       config.extraPlugins = 'floating-tools,notification,autosave,templates,markdown,wordcount,' +
         'clipboard,pastefromword,smiley';
       config.height = 637;
-
+      config.font_names = "'Helvetica Neue';Hiragino Sans GB;STHeiti Light;STHeiti;STKaiti;STSong;STFangsong;";
 
       config.wordcount = {
 
