@@ -10,7 +10,9 @@ require.config({
     lodash: 'scripts/libs/loadsh.min',
     ko: 'scripts/libs/knockout',
     ractive: 'scripts/libs/ractive.min',
-    rv: 'scripts/libs/rv'
+    rv: 'scripts/libs/rv',
+    amplify: 'scripts/libs/amplify.min',
+    'amplify.request': 'scripts/libs/amplify.request.min'
   },
   'shim': {
     ko: {
@@ -18,6 +20,13 @@ require.config({
     },
     lodash: {
       exports: "_"
+    },
+    'amplify.request': {
+      deps: ['amplify']
+    },
+    'amplify': {
+      deps: ['jquery'],
+      exports: 'amplify'
     },
     'jquery.mixitup': {
       deps: ['jquery']
@@ -28,14 +37,21 @@ require.config({
   }
 });
 
-require([ "rv!views/hello", 'ractive', 'scripts/init'], function (helloTemplate, Ractive, init) {
+require([ 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.request'], function (Ractive, init, config, amplify) {
   'use strict';
   init();
 
-  var ractive = new Ractive({
-    el: 'hello',
-    template: helloTemplate,
-    data: { color: "#000000", "fontSize": "20px" }
+  amplify.request.define( "getTitle", "ajax", {
+    url: "./views/titles/hello.html",
+    dataType: "text",
+    type: "GET"
   });
 
+  amplify.request( "getTitle", function( data ) {
+    var ractive = new Ractive({
+      el: 'hello',
+      template: data,
+      data: { color: config.defaultColor, "fontSize": config.defaultFontSize }
+    });
+  });
 });

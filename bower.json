@@ -8,7 +8,8 @@
     "knockoutjs": "~3.3.0",
     "lodash": "~3.10.1",
     "ractive": "~0.7.3",
-    "rv": "~0.1.8"
+    "rv": "~0.1.8",
+    "amplify": "~1.1.2"
   },
   "overrides": {
     "bootstrap-sass": {
