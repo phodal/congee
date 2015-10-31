@@ -41,11 +41,12 @@ require.config({
   }
 });
 
-require([ 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.request', 'spectrum'], function (Ractive, init, config, amplify) {
+require(['ko', 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.request', 'spectrum'], function (ko, Ractive, init, config, amplify) {
   'use strict';
   init();
   var appConfig = config;
   var globalColor = "#000";
+  var ractive = null;
 
   amplify.request.define( "getTitle", "ajax", {
     url: "./views/titles/hello.html",
@@ -54,27 +55,15 @@ require([ 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.reque
   });
 
   amplify.request( "getTitle", function( data ) {
-    var ractive = new Ractive({
+    ractive = new Ractive({
       el: 'hello',
       template: data,
       data: { color: appConfig.defaultColor, "fontSize": appConfig.defaultFontSize }
     });
 
-    ractive.on('changeGlobalColor', function() {
-      console.log("=============")
+    ractive.on('changeGlobalColor', function(args) {
+      ractive.set('color', args.color);
     });
-  });
-
-  var colors = new Ractive({
-    el: 'colors',
-    template: '<input placeholder="Type your name" id="colorpicker" value="{{globalColor}}">',
-    data: {globalColor: globalColor}
-  });
-
-  colors.observe( '.sp-preview-inner', function ( newValue ) {
-    console.log(newValue);
-    appConfig.defaultColor = newValue;
-    this.fire('changeGlobalColor');
   });
 
   $("#colorpicker").spectrum({
@@ -92,6 +81,9 @@ require([ 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.reque
       ["#c00","#e69138","#f1c232","#6aa84f","#45818e","#3d85c6","#674ea7","#a64d79"],
       ["#900","#b45f06","#bf9000","#38761d","#134f5c","#0b5394","#351c75","#741b47"],
       ["#600","#783f04","#7f6000","#274e13","#0c343d","#073763","#20124d","#4c1130"]
-    ]
+    ],
+    change: function(color) {
+      ractive.fire('changeGlobalColor', {color: color.toHexString()});
+    }
   });
 });
