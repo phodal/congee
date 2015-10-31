@@ -58,7 +58,9 @@ define(['ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function() 
     };
 
 
-    var congee = CKEDITOR.replace('congee', {});
+    var congee = CKEDITOR.replace('congee', {
+      uiColor: '#fafafa'
+    });
 
     congee.on('change', function (evt) {
 
