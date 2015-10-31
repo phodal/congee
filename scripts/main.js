@@ -4,8 +4,6 @@ require.config({
     jquery: 'scripts/libs/jquery.min',
     text: 'scripts/libs/text',
     json: 'scripts/libs/json',
-    dust: 'scripts/libs/dust-full.min',
-    'dust-helper': 'scripts/libs/dust-helper.min',
     'jquery.pwstabs': 'scripts/libs/jquery.pwstabs.min',
     'jquery.mixitup': 'scripts/libs/jquery.mixitup.min',
     ckeditor: 'ckeditor/ckeditor',
@@ -30,9 +28,7 @@ require.config({
   }
 });
 
-define.amd.dust = true;
-
-require(["dust", "rv!views/hello", 'ractive', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function (dust, helloTemplate, Ractive) {
+require([ "rv!views/hello", 'ractive', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function (helloTemplate, Ractive) {
   'use strict';
   var ractive = new Ractive({
     el: 'hello',
