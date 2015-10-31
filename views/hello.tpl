@@ -11,6 +11,6 @@
       border-bottom-left-radius: 10px;
       padding: 5px 10px;
       border-bottom-right-radius: 10px;
-      font-size: {font-size};"><p style="margin: 0 auto;">标题</p></section>
+      font-size: {font-size};"><p style="margin: 0 auto;" data-bind="value: firstName" >标题</p></section>
   </section>
 </section>

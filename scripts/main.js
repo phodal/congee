@@ -8,9 +8,17 @@ require.config({
     'dust-helper': 'scripts/libs/dust-helper.min',
     'jquery.pwstabs': 'scripts/libs/jquery.pwstabs.min',
     'jquery.mixitup': 'scripts/libs/jquery.mixitup.min',
-    ckeditor: 'ckeditor/ckeditor'
+    ckeditor: 'ckeditor/ckeditor',
+    lodash: 'scripts/libs/loadsh.min',
+    ko: 'scripts/libs/knockout'
   },
   'shim': {
+    ko: {
+      exports: "ko"
+    },
+    lodash: {
+      exports: "_"
+    },
     'jquery.mixitup': {
       deps: ['jquery']
     },
@@ -22,7 +30,7 @@ require.config({
 
 define.amd.dust = true;
 
-require(["dust", "text!views/hello.tpl", 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function (dust, helloTemplate, ckeditor) {
+require(["dust", "text!views/hello.tpl", 'ko', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function (dust, helloTemplate, ko, ckeditor) {
   'use strict';
   var src = document.getElementById('hello').textContent;
   var compiled = dust.compile(src, 'hello');
@@ -47,7 +55,6 @@ require(["dust", "text!views/hello.tpl", 'ckeditor', 'jquery.mixitup', 'jquery.p
     });
     $('#Container').mixItUp().on('click', '.mix', function(event){
       var template = $(event.currentTarget).html();
-      console.log(template);
       congee.insertHtml(template);
     });
   });

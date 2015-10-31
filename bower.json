@@ -7,7 +7,8 @@
     "jquery": "~2.1.4",
     "dustjs-linkedin": "~2.7.2",
     "dustjs-helpers": "~1.7.3",
-    "knockoutjs": "~3.3.0"
+    "knockoutjs": "~3.3.0",
+    "lodash": "~3.10.1"
   },
   "overrides": {
     "bootstrap-sass": {
