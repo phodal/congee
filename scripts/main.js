@@ -45,7 +45,6 @@ require(['ko', 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.
   'use strict';
   init();
   var appConfig = config;
-  var globalColor = "#000";
   var ractive = null;
 
   amplify.request.define( "getTitle", "ajax", {
@@ -61,7 +60,7 @@ require(['ko', 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.
       data: { color: appConfig.defaultColor, "fontSize": appConfig.defaultFontSize }
     });
 
-    ractive.on('changeGlobalColor', function(args) {
+    ractive.on('changeColor', function(args) {
       ractive.set('color', args.color);
     });
   });
@@ -83,7 +82,7 @@ require(['ko', 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.
       ["#600","#783f04","#7f6000","#274e13","#0c343d","#073763","#20124d","#4c1130"]
     ],
     change: function(color) {
-      ractive.fire('changeGlobalColor', {color: color.toHexString()});
+      ractive.fire('changeColor', {color: color.toHexString()});
     }
   });
 });
