@@ -28,30 +28,14 @@ require.config({
   }
 });
 
-require([ "rv!views/hello", 'ractive', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function (helloTemplate, Ractive) {
+require([ "rv!views/hello", 'ractive', 'scripts/init'], function (helloTemplate, Ractive, init) {
   'use strict';
+  init();
+
   var ractive = new Ractive({
     el: 'hello',
     template: helloTemplate,
     data: { color: "#000000", "fontSize": "20px" }
   });
-  var congee = CKEDITOR.replace('congee', {});
 
-  congee.on('change', function (evt) {
-    // getData() returns CKEditor's HTML content.
-    console.log('Total bytes: ' + evt.editor.getData().length);
-  });
-
-  congee.on('instanceReady', function (ev) {
-    $('.tabset8').pwstabs({
-      effect: 'slideleft',
-      defaultTab: 1,
-      tabsPosition: 'vertical',
-      verticalPosition: 'left'
-    });
-    $('#Container').mixItUp().on('click', '.mix', function(event){
-      var template = $(event.currentTarget).html();
-      congee.insertHtml(template);
-    });
-  });
 });
