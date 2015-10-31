@@ -8,7 +8,6 @@ body {
     background: #eee;
 }
 
-
 #editor {
     float: right;
     width: 50%;
@@ -27,6 +26,22 @@ button.active {
   border: none;
   background-color: #03a9f4;
   color: #fff;
+}
+
+.sp-preview {
+  width: 56px;
+  height: 28px;
+  border: none;
+}
+.sp-replacer {
+  border-color: #fff;
+  border-radius: 4px;
+}
+
+.sp-dd {
+  background: url('images/arrow.png') no-repeat;
+  height: 24px;
+  width: 24px;
 }
 
 .sandbox {
