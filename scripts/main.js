@@ -33,7 +33,7 @@ require([ "rv!views/hello", 'ractive', 'ckeditor', 'jquery.mixitup', 'jquery.pws
   var ractive = new Ractive({
     el: 'hello',
     template: helloTemplate,
-    data: { color: "#000000", "font-size": "20px" }
+    data: { color: "#000000", "fontSize": "20px" }
   });
   var congee = CKEDITOR.replace('congee', {});
 
