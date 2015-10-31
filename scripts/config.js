@@ -1,6 +1,6 @@
 define([], function() {
   return {
-    'defaultColor': '#000000',
+    'defaultColor': '#4caf50',
     'defaultFontSize': '20px'
   };
 });

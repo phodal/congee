@@ -4,32 +4,37 @@ body {
 
 #tabs {
     float: left;
+    width: 50%;
+    background: #eee;
 }
 
-.pws_tabs_list {
-  min-width: 560px;
-  min-height: 512px;
-  width:100%;
-}
-
-.pws_tabs_list {
-  padding-left: 0.2em ;
-}
 
 #editor {
     float: right;
     width: 50%;
 }
 
+#tabs .color {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+#filter {
+  margin: 10px;
+}
+
 button.active {
-  background-color: #888;
+  border: none;
+  background-color: #03a9f4;
+  color: #fff;
 }
 
 .sandbox {
-    background: #03899c;
+    background: #ecf0f1;
     position: relative;
     min-height: 580px;
     padding: 15px;
+    margin: 10px;
     overflow: hidden;
     height: 100%;
 }

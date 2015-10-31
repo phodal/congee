@@ -18,14 +18,17 @@
   <link rel="stylesheet" href="styles/main.css">
 <body>
 <div id="tabs">
-  <input placeholder="Type your name" id="colorpicker" value="{{globalColor}}">
-  <div id="colors"></div>
+    <div class="color">
+      <input placeholder="Type your name" id="colorpicker" value="{{globalColor}}">
+    </div>
 
-      <button class="filter" data-filter="all">All</button>
-      <button class="filter" data-filter=".category-1">Cate 1</button>
-      <button class="filter" data-filter=".category-2">Cate 2</button>
-      <button class="sort" data-sort="my-order:asc">ASC</button>
-      <button class="sort" data-sort="my-order:desc">DESC</button>
+      <div id="filter">
+        <button class="filter" data-filter="all">All</button>
+        <button class="filter" data-filter=".category-1">Cate 1</button>
+        <button class="filter" data-filter=".category-2">Cate 2</button>
+        <button class="sort" data-sort="my-order:asc">ASC</button>
+        <button class="sort" data-sort="my-order:desc">DESC</button>
+      </div>
       <div id="Container" class="sandbox">
         <div class="mix category-1" data-value="5" data-my-order="1"> <div id="hello"></div></p></div>
         <div class="mix category-1" data-value="5" data-my-order="2"> ...</div>
