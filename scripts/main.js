@@ -10,7 +10,9 @@ require.config({
     'jquery.mixitup': 'scripts/libs/jquery.mixitup.min',
     ckeditor: 'ckeditor/ckeditor',
     lodash: 'scripts/libs/loadsh.min',
-    ko: 'scripts/libs/knockout'
+    ko: 'scripts/libs/knockout',
+    ractive: 'scripts/libs/ractive.min',
+    rv: 'scripts/libs/rv'
   },
   'shim': {
     ko: {
@@ -30,14 +32,12 @@ require.config({
 
 define.amd.dust = true;
 
-require(["dust", "text!views/hello.tpl", 'ko', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function (dust, helloTemplate, ko, ckeditor) {
+require(["dust", "rv!views/hello", 'ractive', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function (dust, helloTemplate, Ractive) {
   'use strict';
-  var src = document.getElementById('hello').textContent;
-  var compiled = dust.compile(src, 'hello');
-  dust.loadSource(compiled);
-  dust.render('hello', { color: "#000000", "font-size": "20px" }, function(err, out) {
-    console.log(out);
-    document.getElementById('output').innerHTML = out;
+  var ractive = new Ractive({
+    el: 'hello',
+    template: helloTemplate,
+    data: { color: "#000000", "font-size": "20px" }
   });
   var congee = CKEDITOR.replace('congee', {});
 
