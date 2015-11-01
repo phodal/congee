@@ -88,5 +88,13 @@ define(['ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'jquery.nice
     });
   };
 
-  return init;
+  var config = {
+    'defaultColor': '#4caf50',
+    'defaultFontSize': '20px'
+  }
+
+  return {
+    init: init,
+    config: config
+  };
 });

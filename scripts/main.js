@@ -45,9 +45,10 @@ require.config({
   }
 });
 
-require(['scripts/init', 'scripts/config', 'scripts/views/titleView','scripts/views/hrView', 'amplify.request', 'spectrum' ], function (init, config, TitleView, HRView) {
+require(['scripts/init', 'scripts/views/titleView','scripts/views/hrView', 'spectrum' ], function (Init, TitleView, HRView) {
   'use strict';
-  init();
+  Init.init();
+  var config = Init.config;
 
   var titleView = TitleView.init(config);
   var hrView = HRView.init(config);
