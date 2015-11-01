@@ -21,6 +21,14 @@ baimizhou:
 - jQuery Mixitup
 - Spectrum (ColorPicker)
 
+###Test Stack (TBD)
+
+- PhantomJS(TBD)
+- QUnit / Jasmine (TBD)
+- ES6 & ESLint (TBD)
+
+Browser: Chrome / Firefox / IE8 +
+
 ##Todo
 
 See in: [http://waffle.io/phodal/congee](http://waffle.io/phodal/congee)
