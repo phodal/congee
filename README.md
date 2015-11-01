@@ -4,7 +4,26 @@
 
 欢迎来参与项目：[![Stories in Ready](https://badge.waffle.io/phodal/congee.svg?label=ready&title=Ready)](http://waffle.io/phodal/congee)
 
+baimizhou:
+
 ![Baimizhou Wechat](baimizhou.jpg)
+
+##ScreenShot
+
+![Screenshot](docs/screenshot.jpg)
+
+##Technical Stack
+
+- Ractive (template-driven UI library)
+- Require.JS (AMD)
+- CKEditor
+- jQuery Nicescroll
+- jQuery Mixitup
+- Spectrum (ColorPicker)
+
+##Todo
+
+See in: [http://waffle.io/phodal/congee](http://waffle.io/phodal/congee)
 
 ##License
 
