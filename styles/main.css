@@ -15,7 +15,7 @@ span.cke_combo_text,
 
 #tabs {
   float: left;
-  width: 50%;
+  width: 40%;
 }
 
 #fontawesome a {
@@ -25,7 +25,7 @@ span.cke_combo_text,
 
 #editor {
   float: right;
-  width: 50%;
+  width: 60%;
 }
 
 #tabs .color {
@@ -80,7 +80,7 @@ button.active {
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
   position: relative;
-  background: rgba(255, 255, 255, 0.618);
+  background: rgba(255, 255, 255, 0.2);
   margin-bottom: 4%;
   display: none;
   padding-right: .5em;
