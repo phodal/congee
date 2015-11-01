@@ -1,4 +1,4 @@
-define(['ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function() {
+define(['ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'jquery.nicescroll'], function() {
   'use strict';
   var init = function () {
     /**
@@ -16,7 +16,8 @@ define(['ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function() 
       config.pasteFromWordRemoveFontStyles = false;
       config.pasteFromWordRemoveStyles = false;
       config.extraPlugins = 'floating-tools,notification,autosave,templates,markdown,wordcount,' +
-        'clipboard,pastefromword,smiley,lineutils,widget,fontawesome,dialog,eqneditor';
+        'clipboard,pastefromword,smiley,lineutils,widget,fontawesome,dialog';
+      //['eqneditor']
       config.height = 637;
       config.contentsCss = 'ckeditor/plugins/fontawesome/font-awesome/css/font-awesome.min.css';
       config.font_names = "'Helvetica Neue';Hiragino Sans GB;STHeiti Light;STHeiti;STKaiti;STSong;STFangsong;";
@@ -77,6 +78,12 @@ define(['ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function() 
       $('#Container').mixItUp().on('click', '.mix', function(event){
         var template = $(event.currentTarget).html();
         congee.insertHtml(template);
+      });
+    });
+
+    $(document).ready(function () {
+      $("#Container").niceScroll({
+        mousescrollstep: 40
       });
     });
   };

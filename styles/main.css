@@ -49,6 +49,11 @@ button.active {
   border: none;
 }
 
+#Container {
+  height: 600px;
+  overflow: scroll;
+}
+
 .sp-replacer {
   border-color: #fff;
   border-radius: 4px;

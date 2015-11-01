@@ -13,7 +13,8 @@ require.config({
     rv: 'scripts/libs/rv',
     amplify: 'scripts/libs/amplify.min',
     'amplify.request': 'scripts/libs/amplify.request.min',
-    'spectrum': 'scripts/spectrum/spectrum'
+    'spectrum': 'scripts/spectrum/spectrum',
+    'jquery.nicescroll': 'scripts/libs/jquery.nicescroll.min'
   },
   'shim': {
     ko: {
@@ -33,6 +34,9 @@ require.config({
       deps: ['jquery']
     },
     'jquery.mixitup': {
+      deps: ['jquery']
+    },
+    'jquery.nicescroll': {
       deps: ['jquery']
     },
     'jquery.pwstabs': {

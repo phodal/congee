@@ -11,7 +11,8 @@
     "rv": "~0.1.8",
     "amplify": "~1.1.2",
     "spectrum": "~1.7.1",
-    "moment": "~2.10.6"
+    "moment": "~2.10.6",
+    "jquery.nicescroll": "~3.6.0"
   },
   "overrides": {
     "bootstrap-sass": {
