@@ -78,7 +78,7 @@ require(['ko', 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.
 
   amplify.request( "hrList", function( data ) {
     var Grid = Ractive.extend({
-      isolated: true,
+      isolated: false,
       template: data,
       data: {
 
@@ -113,8 +113,7 @@ require(['ko', 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.
     });
 
     parasView.on('changeColor', function(args) {
-      console.log(args );
-      parasView.set('color', args.color);
+      parasView.findComponent('Grid').set('hrStyle.*.color', args.color);
     });
   });
 
