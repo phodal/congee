@@ -1,7 +1,7 @@
 {{#hrStyle}}
 <div class="mix {{.category}}" data-value={{.data_value}}>
-  <section style="{{.section_style}}">
-    <p style="{{.p_style}}"></p>
+  <section {{#section_style}}style="{{.section_style}}"{{/section_style}}>
+    <p style="{{.p_style}}{{#color}};border-color: {{.color}};{{/color}}"></p>
   </section>
 </div>
 {{/hrStyle}}
