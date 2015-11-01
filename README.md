@@ -4,6 +4,9 @@ A Open Source, Input Less, Template More Editor.
 
 欢迎来参与项目：[![Stories in Ready](https://badge.waffle.io/phodal/congee.svg?label=ready&title=Ready)](http://waffle.io/phodal/congee)
 
+
+[![Build Status](https://travis-ci.org/phodal/congee.svg?branch=gh-pages)](https://travis-ci.org/phodal/congee)
+
 ##ScreenShot
 
 ![Screenshot](docs/screenshot.jpg)
