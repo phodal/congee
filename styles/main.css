@@ -80,14 +80,11 @@ button.active {
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
   position: relative;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.618);
   margin-bottom: 4%;
   display: none;
-  font-size: 25px;
   padding-right: .5em;
   line-height: 1.8em;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
   vertical-align: top;
   -webkit-backface-visibility: hidden;
 }
@@ -102,10 +99,10 @@ button.active {
 .sandbox .mix:after {
   content: '';
   position: absolute;
-  border: 20px solid transparent;
+  border: 15px solid transparent;
   border-right-color: #16a085;
-  top: -20px;
-  left: -20px;
+  top: -15px;
+  left: -15px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
