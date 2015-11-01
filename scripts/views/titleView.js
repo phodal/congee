@@ -1,7 +1,6 @@
 define(['ractive', 'text!views/titles/hello.html'], function (Ractive, listTemplate) {
   'use strict';
   var listView = null;
-  console.log(listTemplate);
 
   var app = {
     init: function (config) {
