@@ -59,7 +59,7 @@ require(['ko', 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.
 
   amplify.request( "getTitle", function( data ) {
     ractive = new Ractive({
-      el: 'hello',
+      el: 'sandboxTitle',
       template: data,
       data: { color: appConfig.defaultColor, "fontSize": appConfig.defaultFontSize }
     });
