@@ -10,7 +10,8 @@
     "ractive": "~0.7.3",
     "rv": "~0.1.8",
     "amplify": "~1.1.2",
-    "spectrum": "~1.7.1"
+    "spectrum": "~1.7.1",
+    "moment": "~2.10.6"
   },
   "overrides": {
     "bootstrap-sass": {
