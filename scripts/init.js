@@ -16,8 +16,9 @@ define(['ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function() 
       config.pasteFromWordRemoveFontStyles = false;
       config.pasteFromWordRemoveStyles = false;
       config.extraPlugins = 'floating-tools,notification,autosave,templates,markdown,wordcount,' +
-        'clipboard,pastefromword,smiley';
+        'clipboard,pastefromword,smiley,lineutils,widget,fontawesome';
       config.height = 637;
+      config.contentsCss = 'ckeditor/plugins/fontawesome/font-awesome/css/font-awesome.min.css';
       config.font_names = "'Helvetica Neue';Hiragino Sans GB;STHeiti Light;STHeiti;STKaiti;STSong;STFangsong;";
 
       config.wordcount = {
@@ -39,7 +40,7 @@ define(['ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs'], function() 
       };
 
       config.toolbar = [
-        {name: 'document', items: ['Preview', 'Smiley']},
+        {name: 'document', items: ['Preview', 'Smiley', 'FontAwesome']},
         {name: 'clipboard', items: ['Undo', 'Redo']},
         {
           name: 'basicstyles',
