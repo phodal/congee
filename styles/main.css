@@ -1,5 +1,6 @@
 body {
-  width: 100%;
+  width: 1280px;
+  margin: 0 auto;
   background: #efefef;
   color: #34495e;
 }
@@ -10,7 +11,7 @@ span.cke_combo_text,
 }
 
 .button, button {
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 #tabs {
@@ -24,6 +25,7 @@ span.cke_combo_text,
 }
 
 #editor {
+  margin-top: 1em;
   float: right;
   width: 60%;
 }
@@ -72,6 +74,8 @@ button.active {
   margin: 10px;
   overflow: hidden;
   height: 100%;
+  border: 1px dotted #fff;
+  border-radius: 2px;
 }
 
 .sandbox .mix {
