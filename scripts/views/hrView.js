@@ -42,8 +42,7 @@ define(['ractive', 'text!views/hr/list.html'], function (Ractive, hrTemplate) {
       parasView.on('changeColor', function(args) {
         parasView.findComponent('Grid').set('hrStyle.*.color', args.color);
       });
-    },
-    getView: function(){
+
       return parasView;
     }
   };

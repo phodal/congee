@@ -45,16 +45,12 @@ require.config({
   }
 });
 
-require(['scripts/init', 'scripts/config', 'scripts/views/titleView','scripts/views/hrView', 'amplify.request', 'spectrum' ], function (init, config, TitleView, hrView) {
+require(['scripts/init', 'scripts/config', 'scripts/views/titleView','scripts/views/hrView', 'amplify.request', 'spectrum' ], function (init, config, TitleView, HRView) {
   'use strict';
   init();
 
-  TitleView.init(config);
-  var titleView = TitleView.getView();
-
-  hrView.init(config);
-  var hrView = hrView.getView();
-
+  var titleView = TitleView.init(config);
+  var hrView = HRView.init(config);
 
   $("#colorpicker").spectrum({
     showPaletteOnly: true,

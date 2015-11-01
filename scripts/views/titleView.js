@@ -13,8 +13,7 @@ define(['ractive', 'text!views/titles/hello.html'], function (Ractive, listTempl
       listView.on('changeColor', function (args) {
         listView.set('color', args.color);
       });
-    },
-    getView: function(){
+
       return listView;
     }
   };
