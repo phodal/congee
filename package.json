@@ -1,58 +1,46 @@
 {
   "private": true,
-  "devDependencies": {
-    "autoprefixer": "^6.0.2",
-    "grunt": "^0.4.5",
-    "grunt-babel": "^5.0.0",
-    "grunt-browser-sync": "^2.1.2",
-    "grunt-concurrent": "^1.0.0",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-cssmin": "^0.12.2",
-    "grunt-contrib-htmlmin": "^0.4.0",
-    "grunt-contrib-imagemin": "^0.9.3",
-    "grunt-contrib-uglify": "^0.8.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-eslint": "^17.0.0",
-    "grunt-filerev": "^2.2.0",
-    "grunt-mocha": "^0.4.12",
-    "grunt-modernizr": "^0.6.0",
-    "grunt-newer": "^1.1.0",
-    "grunt-postcss": "^0.6.0",
-    "grunt-sass": "^1.0.0",
-    "grunt-svgmin": "^2.0.1",
-    "grunt-usemin": "^3.0.0",
-    "grunt-wiredep": "^2.0.0",
-    "jit-grunt": "^0.9.1",
-    "time-grunt": "^1.1.0"
-  },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "mocha --reporter spec"
   },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended"
-    ],
-    "env": {
-      "node": true,
-      "browser": true,
-      "es6": true,
-      "jquery": true,
-      "mocha": true
-    },
-    "rules": {
-      "quotes": [
-        2,
-        "single"
-      ],
-      "indent": [
-        2,
-        2
-      ]
-    }
+  "devDependencies": {
+    "chai": "~1.8.0",
+    "connect": "^3.0.1",
+    "connect-livereload": "^0.5.0",
+    "del": "^0.1.0",
+    "expect.js": ">= 0.3.1",
+    "gulp": "^3.6.0",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-cache": "^0.2.2",
+    "gulp-csso": "^0.2.6",
+    "gulp-filter": "^1.0.2",
+    "gulp-flatten": "^0.0.4",
+    "gulp-if": "^1.2.1",
+    "gulp-jshint": "^1.5.3",
+    "gulp-livereload": "^2.0.0",
+    "gulp-load-plugins": "^0.7.1",
+    "gulp-mocha": "2.0.0",
+    "gulp-plumber": "^0.6.3",
+    "gulp-replace": "^0.4.0",
+    "gulp-size": "^1.1.0",
+    "gulp-uglify": "^1.0.1",
+    "gulp-useref": "^1.0.2",
+    "istanbul": "^0.3.0",
+    "jsdom": "3.1.2",
+    "jshint-stylish": "^1.0.0",
+    "lazypipe": "^0.2.1",
+    "main-bower-files": "^2.1.0",
+    "mocha": "2.1.0",
+    "mocha-jsdom": "^0.2.1",
+    "mocha-lcov-reporter": "^0.0.1",
+    "opn": "^1.0.0",
+    "requirejs": "2.1.16",
+    "serve-index": "^1.1.4",
+    "serve-static": "^1.4.0",
+    "should": ">= 3.2.0",
+    "wiredep": "^2.0.0"
   }
 }
