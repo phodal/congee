@@ -45,30 +45,14 @@ require.config({
   }
 });
 
-require(['ko', 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.request', 'spectrum'], function (ko, Ractive, init, config, amplify) {
+require(['ko', 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'scripts/views/titleView', 'amplify.request', 'spectrum' ], function (ko, Ractive, init, config, amplify, TitleView) {
   'use strict';
   init();
   var appConfig = config;
-  var ractive = null;
   var parasView = null;
 
-  amplify.request.define( "getTitle", "ajax", {
-    url: "./views/titles/hello.html",
-    dataType: "text",
-    type: "GET"
-  });
-
-  amplify.request( "getTitle", function( data ) {
-    ractive = new Ractive({
-      el: 'sandboxTitle',
-      template: data,
-      data: { color: appConfig.defaultColor, "fontSize": appConfig.defaultFontSize }
-    });
-
-    ractive.on('changeColor', function(args) {
-      ractive.set('color', args.color);
-    });
-  });
+  TitleView.init(config);
+  var titleView = TitleView.getView();
 
   amplify.request.define( "hrList", "ajax", {
     url: "./views/hr/list.html",
@@ -135,7 +119,7 @@ require(['ko', 'ractive', 'scripts/init', 'scripts/config', 'amplify', 'amplify.
       ["#ecf0f1","efefef"]
     ],
     change: function(color) {
-      ractive.fire('changeColor', {color: color.toHexString()});
+      titleView.fire('changeColor', {color: color.toHexString()});
       parasView.fire('changeColor', {color: color.toHexString()});
     }
   });
