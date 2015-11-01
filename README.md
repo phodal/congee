@@ -1,12 +1,8 @@
 # Congee Editor
 
-> A Wechat Editor designed for [http://baimizhou.net](http://baimizhou.net)
+A Open Source, Input Less, Template More Editor.
 
 欢迎来参与项目：[![Stories in Ready](https://badge.waffle.io/phodal/congee.svg?label=ready&title=Ready)](http://waffle.io/phodal/congee)
-
-baimizhou:
-
-![Baimizhou Wechat](baimizhou.jpg)
 
 ##ScreenShot
 
@@ -32,6 +28,11 @@ Browser: Chrome / Firefox / IE8 +
 ##Todo
 
 See in: [http://waffle.io/phodal/congee](http://waffle.io/phodal/congee)
+
+
+baimizhou:
+
+![Baimizhou Wechat](baimizhou.jpg)
 
 ##License
 
