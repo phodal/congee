@@ -1,6 +1,6 @@
 /* 
  Equation Editor Plugin for CKEditor v4
- Version 1.4
+ Version 2.1
 
  This plugin allows equations to be created and edited from within CKEditor.
  For more information goto: http://www.codecogs.com/latex/integration/ckeditor_v4/install.php
@@ -80,7 +80,7 @@ CKEDITOR.dialog.add( 'eqneditorDialog', function(editor)
 			eqn.setAttribute( 'alt', EqEditor.getTextArea().getLaTeX());
 			eqn.setAttribute( 'src', EqEditor.getTextArea().exportEquation('urlencoded'));
 			editor.insertElement(eqn);
-			Example.add_history(EqEditor.getTextArea().getLaTeX());
+			EqEditor.Example.add_history(EqEditor.getTextArea().getLaTeX());
 		}
 	};
 });
