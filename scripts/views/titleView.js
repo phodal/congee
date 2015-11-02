@@ -7,7 +7,7 @@ define(['ractive', 'text!views/titles/hello.html'], function (Ractive, listTempl
       listView = new Ractive({
         el: 'sandboxTitle',
         template: listTemplate,
-        data: {color: config.defaultColor, "fontSize": config.defaultFontSize}
+        data: {color: config.defaultColor, 'fontSize': config.defaultFontSize}
       });
 
       listView.on('changeColor', function (args) {
