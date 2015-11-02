@@ -9,7 +9,7 @@ var jscs = require('gulp-jscs');
 
 gulp.task('test', function () {
   return gulp.src('test/spec/*.js')
-    .pipe(mocha({reporter: 'spec'}))
+    .pipe(mocha())
     .pipe(istanbul.writeReports());
 });
 
