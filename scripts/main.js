@@ -56,5 +56,5 @@ require(['scripts/init', 'scripts/views/titleView','scripts/views/hrView', 'spec
   Init.colorPicker(function(color){
     titleView.fire('changeColor', {color: color.toHexString()});
     hrView.fire('changeColor', {color: color.toHexString()});
-  })
+  });
 });

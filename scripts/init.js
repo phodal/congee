@@ -1,4 +1,6 @@
-define(['ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'jquery.nicescroll'], function() {
+/*global $,CKEDITOR */
+
+define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'jquery.nicescroll'], function() {
   'use strict';
   var init = function () {
     /**

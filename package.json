@@ -19,6 +19,8 @@
     "gulp-filter": "^1.0.2",
     "gulp-flatten": "^0.0.4",
     "gulp-if": "^1.2.1",
+    "gulp-istanbul": "^0.10.2",
+    "gulp-jscs": "^3.0.2",
     "gulp-jshint": "^1.5.3",
     "gulp-livereload": "^2.0.0",
     "gulp-load-plugins": "^0.7.1",
