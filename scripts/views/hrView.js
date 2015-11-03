@@ -44,6 +44,10 @@ define(['ractive', 'text!views/hr/list.html'], function (Ractive, hrTemplate) {
       });
 
       return parasView;
+    },
+
+    toStyle: function(data){
+      
     }
   };
 
