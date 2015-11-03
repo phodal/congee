@@ -18,10 +18,10 @@ require.config({
   },
   'shim': {
     ko: {
-      exports: "ko"
+      exports: 'ko'
     },
     lodash: {
-      exports: "_"
+      exports: '_'
     },
     'amplify.request': {
       deps: ['amplify']
