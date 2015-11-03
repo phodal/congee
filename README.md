@@ -11,6 +11,11 @@ A Open Source, Input Less, Template More Editor.
 
 ![Screenshot](docs/screenshot.jpg)
 
+##Feature
+
+- 导入QQ音乐
+- 丰富多彩的样式
+
 ##Technical Stack
 
 - Ractive (template-driven UI library)
