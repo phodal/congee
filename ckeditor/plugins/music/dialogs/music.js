@@ -25,7 +25,6 @@ function appendData(musicNode) {
   musicNode.setAttribute("albumurl", "/N/Y/002Qp0Jv1PFKNY.jpg");
   musicNode.setAttribute("audiourl", "http://ws.stream.qqmusic.qq.com/657177.m4a?fromtag=46");
   musicNode.setAttribute("commentid", "1873023090");
-  musicNode.setAttribute("mid", "002lFkz43D4bvB");
   musicNode.setAttribute("musicid", "657177");
   musicNode.setAttribute("class", "res_iframe qqmusic_iframe js_editor_qqmusic");
   musicNode.setAttribute("play_length", "236000");
@@ -43,7 +42,7 @@ CKEDITOR.dialog.add('music', function (editor) {
     minWidth: 480,
     minHeight: 240,
     onShow: function () {
-      
+
     },
     onOk: function () {
       var musicNode;
