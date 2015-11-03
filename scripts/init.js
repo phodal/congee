@@ -43,7 +43,7 @@ define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'j
       };
 
       config.toolbar = [
-        {name: 'document', items: ['Preview', 'EqnEditor', 'Smiley', 'FontAwesome']},
+        {name: 'document', items: ['Preview', 'Music', 'Smiley', 'FontAwesome']},
         {name: 'clipboard', items: ['Undo', 'Redo']},
         {
           name: 'basicstyles',
