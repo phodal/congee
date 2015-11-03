@@ -43,38 +43,14 @@ CKEDITOR.dialog.add('music', function (editor) {
     minWidth: 480,
     minHeight: 240,
     onShow: function () {
-      this.fakeImage = this.musicNode = null;
-
-      var fakeImage = this.getSelectedElement();
-      if (fakeImage && fakeImage.data('cke-real-element-type') && fakeImage.data('cke-real-element-type') == 'iframe') {
-        this.fakeImage = fakeImage;
-
-        var musicNode = editor.restoreRealElement(fakeImage);
-        this.musicNode = musicNode;
-
-        this.setupContent(musicNode);
-      }
+      
     },
     onOk: function () {
       var musicNode;
-      if (!this.fakeImage)
-        musicNode = new CKEDITOR.dom.element('iframe');
-      else
-        musicNode = this.musicNode;
+      musicNode = new CKEDITOR.dom.element('iframe');
 
-      var extraStyles = {},
-        extraAttributes = {};
-      this.commitContent(musicNode, extraStyles, extraAttributes);
-
-      var newFakeImage = editor.createFakeElement(musicNode, 'cke_iframe', 'iframe', true);
-      newFakeImage.setAttributes(extraAttributes);
-      newFakeImage.setStyles(extraStyles);
-      if (this.fakeImage) {
-        newFakeImage.replace(this.fakeImage);
-        editor.getSelection().selectElement(newFakeImage);
-      } else {
-        editor.insertElement(newFakeImage);
-      }
+      this.commitContent(musicNode, {}, {});
+      editor.insertElement(musicNode);
     },
     contents: [{
       id: 'music',
