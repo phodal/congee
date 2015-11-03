@@ -60,14 +60,15 @@ describe('Basic Test', function () {
 
   before(function (done) {
     requirejs(['scripts/views/hrView'], function (HRView) {
-      hrView = HRView;
+      hrView = HRView.init(config);
       done();
     });
   });
 
   describe('Basic Test', function () {
     it('should have a test', function () {
-      console.log(hrView.init(config));
+      var section = hrView.findComponent('Grid').get('styles.1');
+      section.color.should.equal(config.defaultColor);
     });
   });
 });
