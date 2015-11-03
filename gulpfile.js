@@ -7,7 +7,14 @@ var istanbul = require('gulp-istanbul');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 
-gulp.task('test', function () {
+gulp.task('pre-test', function () {
+  return gulp.src(['scripts/views/*.js', 'scripts/init.js', 'scripts/main.js'])
+    .pipe(istanbul())
+    .pipe(istanbul.hookRequire())
+    .pipe(gulp.dest('test-tmp/'));
+});
+
+gulp.task('test', ['pre-test'], function () {
   return gulp.src('test/spec/*.js')
     .pipe(mocha())
     .pipe(istanbul.writeReports());
