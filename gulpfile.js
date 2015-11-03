@@ -63,10 +63,6 @@ gulp.task('watch', ['connect'], function () {
   ]).on('change', $.livereload.changed);
 });
 
-gulp.task('build', ['jshint', 'test'], function () {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
-});
+gulp.task('default', ['jshint', 'test'], function () {
 
-gulp.task('default', function () {
-  gulp.start('build');
 });
