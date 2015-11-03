@@ -18,7 +18,7 @@ define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'j
       config.pasteFromWordRemoveFontStyles = false;
       config.pasteFromWordRemoveStyles = false;
       config.extraPlugins = 'floating-tools,notification,autosave,templates,markdown,wordcount,' +
-        'clipboard,pastefromword,smiley,lineutils,widget,fontawesome,dialog';
+        'clipboard,pastefromword,smiley,lineutils,widget,fontawesome,dialog,music';
       //['eqneditor']
       config.height = 637;
       config.contentsCss = 'ckeditor/plugins/fontawesome/font-awesome/css/font-awesome.min.css';
