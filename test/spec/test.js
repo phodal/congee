@@ -65,10 +65,17 @@ describe('Basic Test', function () {
     });
   });
 
-  describe('Basic Test', function () {
-    it('should have a test', function () {
+  describe('Basic HR View Test', function () {
+    it('should return correctly color', function () {
       var section = hrView.findComponent('Grid').get('styles.1');
       section.color.should.equal(config.defaultColor);
+      section.p_style.should.equal('background-color: #fff;border-top: 3px double');
+    });
+
+    it('should return correctly color when change color', function () {
+      hrView.fire('changeColor', {color: '#fff'});
+      var section = hrView.findComponent('Grid').get('styles.2');
+      section.color.should.equal('#fff');
     });
   });
 });
