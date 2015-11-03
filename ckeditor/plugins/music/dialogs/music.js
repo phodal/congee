@@ -10,9 +10,13 @@ CKEDITOR.dialog.add( 'music', function( editor ) {
       expand: true,
       padding: 0,
       elements: [
-
+        {
+          type: 'html',
+          html: 'Hello, World'
+        }
       ]
     } ],
-    buttons: [ CKEDITOR.dialog.cancelButton ]
+    buttons: [ CKEDITOR.dialog.cancelButton, CKEDITOR.dialog.okButton ]
   };
+
 } );
