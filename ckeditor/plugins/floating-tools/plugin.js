@@ -565,9 +565,8 @@
 			 */
 			getPrivateFloatingToolbarGroups = function( editor ) {
 				return editor._.floatingToolsGroups || ( editor._.floatingToolsGroups = [
-					{ name: 'styles',    items: [ 'Font','FontSize' ]},
-					{ name: 'format',    items: [ 'Bold','Italic' ]},
-					{ name: 'paragraph', items: [ 'JustifyCenter','Outdent','Indent','NumberedList','BulletedList' ]}
+					{ name: 'styles',    items: [ 'FontSize']},
+					{ name: 'paragraph', items: [ 'JustifyCenter']}
 				]);
 			}
 
