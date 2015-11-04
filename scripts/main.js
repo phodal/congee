@@ -45,8 +45,8 @@ require.config({
   }
 });
 
-require(['scripts/init', 'scripts/views/titleView', 'scripts/views/hrView', 'scripts/views/parasView', 'scripts/views/followView', 'spectrum'],
-  function (Init, TitleView, ParasView, HRView, FollowView) {
+require(['scripts/init', 'scripts/views/titleView', 'scripts/views/hrView', 'scripts/views/parasView', 'scripts/views/followView', 'jquery', 'spectrum'],
+  function (Init, TitleView, ParasView, HRView, FollowView, $) {
     'use strict';
 
     Init.init();
@@ -64,7 +64,7 @@ require(['scripts/init', 'scripts/views/titleView', 'scripts/views/hrView', 'scr
       followView.fire('changeColor', {color: color.toHexString()});
     });
 
-    $("input#mpName").keyup(function () {
+    $('input#mpName').keyup(function () {
       followView.fire('changeName', {mpName: $(this).val()});
     });
   });

@@ -8,6 +8,6 @@ notifications:
 branches:
   only:
     - gh-pages
-
-after_sucess: CODECLIMATE_REPO_TOKEN=1485c05d5746f9e444c8de7c99ccef4261349bf8f337ddbca74da34e42aba0d4 codeclimate-test-reporter < coveragelcov.info
+before_install: npm install -g codeclimate-test-reporter
+after_sucess: CODECLIMATE_REPO_TOKEN=1485c05d5746f9e444c8de7c99ccef4261349bf8f337ddbca74da34e42aba0d4 codeclimate-test-reporter < coverage/lcov.info
 
