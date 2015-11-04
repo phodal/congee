@@ -17,33 +17,20 @@ define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'j
       config.allowedContent = true;
       config.pasteFromWordRemoveFontStyles = false;
       config.pasteFromWordRemoveStyles = false;
-      config.extraPlugins = 'floating-tools,notification,autosave,templates,markdown,wordcount,' +
-        'clipboard,pastefromword,smiley,lineutils,widget,fontawesome,dialog,music,preview';
-      //['eqneditor']
+      config.extraPlugins = 'floating-tools,notification,autosave,templates,wordcount,' +
+        'clipboard,pastefromword,smiley,,dialog,music,preview';
       config.height = 637;
-      config.contentsCss = 'ckeditor/plugins/fontawesome/font-awesome/css/font-awesome.min.css';
-      config.font_names = '\'Helvetica Neue\';Hiragino Sans GB;STHeiti Light;STHeiti;STKaiti;STSong;STFangsong;';
 
       config.wordcount = {
-
-        // Whether or not you want to show the Paragraphs Count
         showParagraphs: true,
-
-        // Whether or not you want to show the Word Count
         showWordCount: true,
-
-        // Whether or not you want to show the Char Count
         showCharCount: true,
-
-        // Whether or not you want to count Spaces as Chars
         countSpacesAsChars: true,
-
-        // Whether or not to include Html chars in the Char Count
         countHTML: true
       };
 
       config.toolbar = [
-        {name: 'document', items: ['Preview', 'Music', 'Smiley', 'FontAwesome']},
+        {name: 'document', items: ['Preview', 'Music', 'Smiley', 'Copy']},
         {name: 'clipboard', items: ['Undo', 'Redo']},
         {
           name: 'basicstyles',
@@ -51,13 +38,13 @@ define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'j
         },
         {
           name: 'paragraph',
-          items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv',
+          items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote',
             '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
         },
         '/',
         {name: 'styles', items: ['Format', 'Font', 'FontSize']},
         {name: 'colors', items: ['TextColor', 'BGColor']},
-        {name: 'tools', items: ['Maximize', 'ShowBlocks', 'Source', 'Markdown']}
+        {name: 'tools', items: ['Maximize', 'ShowBlocks', 'Source']}
       ];
     };
 
