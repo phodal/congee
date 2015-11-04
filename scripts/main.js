@@ -45,7 +45,8 @@ require.config({
   }
 });
 
-require(['scripts/init', 'scripts/views/titleView', 'scripts/views/hrView', 'scripts/views/parasView', 'spectrum'], function (Init, TitleView, ParasView, HRView) {
+require(['scripts/init', 'scripts/views/titleView', 'scripts/views/hrView', 'scripts/views/parasView', 'scripts/views/followView', 'spectrum'],
+  function (Init, TitleView, ParasView, HRView, FollowView) {
   'use strict';
 
   Init.init();
@@ -54,10 +55,12 @@ require(['scripts/init', 'scripts/views/titleView', 'scripts/views/hrView', 'scr
   var titleView = TitleView.init(config);
   var hrView = HRView.init(config);
   var parasView = ParasView.init(config);
+  var followView = FollowView.init(config);
 
   Init.colorPicker(function (color) {
-    titleView.fire('changeColor', {color: color.toHexString()});
     hrView.fire('changeColor', {color: color.toHexString()});
+    titleView.fire('changeColor', {color: color.toHexString()});
     parasView.fire('changeColor', {color: color.toHexString()});
+    followView.fire('changeColor', {color: color.toHexString()});
   });
 });
