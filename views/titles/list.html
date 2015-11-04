@@ -1,4 +1,6 @@
-<section style="margin:1em auto;white-space: normal;border-style: none;text-align: center;">
+{{#Style}}
+<div class="mix {{.category}}" data-value={{.data_value}}>
+<section style="{{.section_style}}">
   <section style="width: 100%; border-top: solid 1px {{color}};
     display: inline-block;">
       <section style="
@@ -9,6 +11,8 @@
       border-bottom-left-radius: 10px;
       padding: 5px 10px;
       border-bottom-right-radius: 10px;
-      font-size: {{fontSize}};"><p style="margin: 0 auto;">标题</p></section>
+      font-size: 20px;"><p style="margin: 0 auto;">标题</p></section>
   </section>
 </section>
+</div>
+{{/Style}}
