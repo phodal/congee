@@ -6,6 +6,8 @@ A Open Source, Input Less, Template More Editor.
 
 
 [![Build Status](https://travis-ci.org/phodal/congee.svg?branch=gh-pages)](https://travis-ci.org/phodal/congee)
+[![Code Climate](https://codeclimate.com/github/phodal/congee/badges/gpa.svg)](https://codeclimate.com/github/phodal/congee)
+[![Test Coverage](https://codeclimate.com/github/phodal/congee/badges/coverage.svg)](https://codeclimate.com/github/phodal/congee/coverage)
 
 ##ScreenShot
 
