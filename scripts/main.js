@@ -47,20 +47,24 @@ require.config({
 
 require(['scripts/init', 'scripts/views/titleView', 'scripts/views/hrView', 'scripts/views/parasView', 'scripts/views/followView', 'spectrum'],
   function (Init, TitleView, ParasView, HRView, FollowView) {
-  'use strict';
+    'use strict';
 
-  Init.init();
-  var config = Init.config;
+    Init.init();
+    var config = Init.config;
 
-  var titleView = TitleView.init(config);
-  var hrView = HRView.init(config);
-  var parasView = ParasView.init(config);
-  var followView = FollowView.init(config);
+    var titleView = TitleView.init(config);
+    var hrView = HRView.init(config);
+    var parasView = ParasView.init(config);
+    var followView = FollowView.init(config);
 
-  Init.colorPicker(function (color) {
-    hrView.fire('changeColor', {color: color.toHexString()});
-    titleView.fire('changeColor', {color: color.toHexString()});
-    parasView.fire('changeColor', {color: color.toHexString()});
-    followView.fire('changeColor', {color: color.toHexString()});
+    Init.colorPicker(function (color) {
+      hrView.fire('changeColor', {color: color.toHexString()});
+      titleView.fire('changeColor', {color: color.toHexString()});
+      parasView.fire('changeColor', {color: color.toHexString()});
+      followView.fire('changeColor', {color: color.toHexString()});
+    });
+
+    $("input#mpName").keyup(function () {
+      followView.fire('changeName', {mpName: $(this).val()});
+    });
   });
-});

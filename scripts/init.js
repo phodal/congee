@@ -92,7 +92,8 @@ define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'j
 
   var config = {
     'defaultColor': '#4caf50',
-    'defaultFontSize': '20px'
+    'defaultFontSize': '20px',
+    'defaultMPName': 'xxx'
   };
 
   var colorPicker = function (changeCB) {
