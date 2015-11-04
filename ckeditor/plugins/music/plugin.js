@@ -9,7 +9,7 @@ CKEDITOR.plugins.add('music',
         requiredContent: 'iframe'
       }));
       editor.ui.addButton && editor.ui.addButton('Music', {
-        label: editor.lang.smiley.toolbar,
+        label: "QQ音乐",
         command: 'music',
         toolbar: 'insert,50'
       });
