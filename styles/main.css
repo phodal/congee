@@ -93,6 +93,10 @@ button.active {
   -webkit-backface-visibility: hidden;
 }
 
+.sandbox .mix {
+  cursor: copy;
+}
+
 .sandbox .mix:before {
   content: '';
   display: inline-block;
