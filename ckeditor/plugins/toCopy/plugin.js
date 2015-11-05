@@ -6,10 +6,7 @@ CKEDITOR.plugins.add("tocopy",
       editor.addCommand('tocopy', {
         modes: {wysiwyg: 1, source: 1},
         exec: function (editor) {
-          editor.document.$.execCommand( 'SelectAll', false, null );
-          setTimeout(function () {
-            editor.document.$.execCommand('Copy');
-          }, 0);
+          editor.setData( '' );
         },
         canUndo: false
       });
