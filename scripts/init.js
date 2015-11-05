@@ -30,7 +30,8 @@ define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'j
       };
 
       config.toolbar = [
-        {name: 'document', items: ['Preview', 'Music', 'Smiley', 'Copy', 'RemoveFormat','SelectAll', 'tocopy']},
+        {name: 'document', items: ['Preview', 'Music', 'Copy', 'SelectAll']},
+        {name: 'super', items: ['Smiley', 'RemoveFormat','tocopy']},
         {
           name: 'basicstyles',
           items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript']
