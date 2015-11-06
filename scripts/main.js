@@ -45,19 +45,19 @@ require.config({
   }
 });
 
-require(['scripts/init', 'scripts/views/titleView', 'scripts/views/hrView', 'scripts/views/parasView', 'scripts/views/followView', 'jquery', 'spectrum'],
-  function (Init, TitleView, ParasView, HRView, FollowView, $) {
+require(['scripts/app', 'scripts/views/titleView', 'scripts/views/hrView', 'scripts/views/parasView', 'scripts/views/followView', 'jquery', 'spectrum'],
+  function (App, TitleView, ParasView, HRView, FollowView, $) {
     'use strict';
 
-    Init.init();
-    var config = Init.config;
+    App.init();
+    var config = App.config;
 
     var titleView = TitleView.init(config);
     var hrView = HRView.init(config);
     var parasView = ParasView.init(config);
     var followView = FollowView.init(config);
 
-    Init.colorPicker(function (color) {
+    App.colorPicker(function (color) {
       hrView.fire('changeColor', {color: color.toHexString()});
       titleView.fire('changeColor', {color: color.toHexString()});
       parasView.fire('changeColor', {color: color.toHexString()});
