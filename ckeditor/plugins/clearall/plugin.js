@@ -12,7 +12,7 @@ CKEDITOR.plugins.add("clearall",
       });
 
       editor.ui.addButton && editor.ui.addButton('ClearAll', {
-        label: "复制全部",
+        label: "清空文档",
         command: 'clearall',
         toolbar: 'insert,50'
       });
