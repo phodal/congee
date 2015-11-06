@@ -45,11 +45,12 @@ require.config({
   }
 });
 
-require(['scripts/app', 'scripts/views/titleView', 'scripts/views/hrView', 'scripts/views/parasView', 'scripts/views/followView', 'jquery', 'spectrum'],
-  function (App, TitleView, ParasView, HRView, FollowView, $) {
+require(['scripts/app', 'ractive', 'scripts/views/titleView', 'scripts/views/hrView', 'scripts/views/parasView', 'scripts/views/followView', 'jquery', 'spectrum'],
+  function (App, Ractive, TitleView, ParasView, HRView, FollowView, $) {
     'use strict';
 
     App.init();
+    Ractive.DEBUG = false;
     var config = App.config;
 
     var titleView = TitleView.init(config);
