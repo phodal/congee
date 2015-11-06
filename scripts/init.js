@@ -18,7 +18,7 @@ define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'j
       config.pasteFromWordRemoveFontStyles = false;
       config.pasteFromWordRemoveStyles = false;
       config.extraPlugins = 'floating-tools,notification,autosave,templates,wordcount,' +
-        'clipboard,pastefromword,smiley,dialog,music,preview,selectall,tocopy';
+        'clipboard,pastefromword,smiley,dialog,music,preview,selectall,clearall';
       config.height = 637;
 
       config.wordcount = {
@@ -30,7 +30,7 @@ define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'j
       };
 
       config.toolbar = [
-        {name: 'document', items: ['Music', 'Copy', 'SelectAll', 'tocopy', 'Preview']},
+        {name: 'document', items: ['Music', 'Copy', 'SelectAll', 'ClearAll', 'Preview']},
         {name: 'super', items: ['Smiley', 'RemoveFormat']},
         {
           name: 'basicstyles',

@@ -1,9 +1,9 @@
-CKEDITOR.plugins.add("tocopy",
+CKEDITOR.plugins.add("clearall",
   {
     require: 'notification',
-    icons: 'tocopy',
+    icons: 'clearall',
     init: function (editor) {
-      editor.addCommand('tocopy', {
+      editor.addCommand('clearall', {
         modes: {wysiwyg: 1, source: 1},
         exec: function (editor) {
           editor.setData( '' );
@@ -11,9 +11,9 @@ CKEDITOR.plugins.add("tocopy",
         canUndo: false
       });
 
-      editor.ui.addButton && editor.ui.addButton('tocopy', {
+      editor.ui.addButton && editor.ui.addButton('ClearAll', {
         label: "复制全部",
-        command: 'tocopy',
+        command: 'clearall',
         toolbar: 'insert,50'
       });
     }
