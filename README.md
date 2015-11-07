@@ -1,9 +1,10 @@
 # Congee Editor
 
-A Open Source, Input Less, Template More Editor.
+> A Open Source, Input Less, Template More Editor.
 
-欢迎来参与项目：[![Stories in Ready](https://badge.waffle.io/phodal/congee.svg?label=ready&title=Ready)](http://waffle.io/phodal/congee)
+欢迎试用，并提出意见。
 
+Kanban：[![Stories in Ready](https://badge.waffle.io/phodal/congee.svg?label=ready&title=Ready)](http://waffle.io/phodal/congee)
 
 [![Build Status](https://travis-ci.org/phodal/congee.svg?branch=gh-pages)](https://travis-ci.org/phodal/congee)
 [![Code Climate](https://codeclimate.com/github/phodal/congee/badges/gpa.svg)](https://codeclimate.com/github/phodal/congee)
@@ -17,6 +18,9 @@ A Open Source, Input Less, Template More Editor.
 
 - 导入QQ音乐
 - 丰富多彩的样式
+- 颜色切换
+- 一键复制、清空
+- 离线使用
 
 ##Technical Stack
 
