@@ -12,72 +12,84 @@
   <link rel="stylesheet" href="styles/main.css">
 <body>
 <div id="tabs">
-    <div class="color">
-      <button class="filter" data-filter="all">全部</button>
-      <input placeholder="Type your name" id="colorpicker" value="{{globalColor}}">
-      <input type="text" placeholder="输入微信公众号"  id="mpName" value="">
+  <div class="color">
+    <button class="filter" data-filter="all">全部</button>
+    <input placeholder="Type your name" id="colorpicker" value="{{globalColor}}">
+    <input type="text" placeholder="输入微信公众号" id="mpName" value="">
+  </div>
+
+  <div id="filter">
+    <button class="filter" data-filter=".category-1">标题</button>
+    <button class="filter" data-filter=".category-2">卡片</button>
+    <button class="filter" data-filter=".category-3">段落</button>
+    <button class="filter" data-filter=".category-4">分隔符</button>
+    <button class="filter" data-filter=".category-5">顶与关注</button>
+    <button class="filter" data-filter=".category-6">图文</button>
+    <button class="filter" data-filter=".category-7">模板</button>
+  </div>
+  <div id="Container" class="sandbox" style="font-size: 14px;">
+    <div id="sandboxTitle"></div>
+    <div class="mix category-2" data-value="5">
+      <section
+        style='background: #f9f9f9;border-left: 10px solid #ccc;margin: 1em;padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019";'>
+        <section
+          style=" color: #ccc;content: open-quote;font-size: 4em;line-height: 0.1em;margin-right: 0.25em;vertical-align: -0.4em;"></section>
+        <p style="display: inline;color: #4caf50; font-size: 14px;">标题</p>
+      </section>
     </div>
 
-      <div id="filter">
-        <button class="filter" data-filter=".category-1">标题</button>
-        <button class="filter" data-filter=".category-2">卡片</button>
-        <button class="filter" data-filter=".category-3">段落</button>
-        <button class="filter" data-filter=".category-4">分隔符</button>
-        <button class="filter" data-filter=".category-5">顶与关注</button>
-        <button class="filter" data-filter=".category-6">图文</button>
-        <button class="filter" data-filter=".category-7">模板</button>
-      </div>
-      <div id="Container" class="sandbox" style="font-size: 14px;">
-        <div id="sandboxTitle"></div>
-        <div class="mix category-2" data-value="5">
-          <section style='background: #f9f9f9;border-left: 10px solid #ccc;margin: 1em;padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019";'>
-            <section style=" color: #ccc;content: open-quote;font-size: 4em;line-height: 0.1em;margin-right: 0.25em;vertical-align: -0.4em;"></section>
-            <p style="display: inline;color: #4caf50; font-size: 14px;">标题</p>
-          </section>
-        </div>
+    <div class="mix category-3" data-value="5">
+      <section style="border: 2px dotted #4caf50; margin: 8px 14px; padding: 10px; border-radius: 14px;">
+        <p style="color: #34495e;line-height:16px;"><span
+          style="float: left; color: #903; font-size: 2em; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px;margin-top: -20px;">我</span>
+          说你是人间的四月天；
+          笑响点亮了四面风；轻灵
+          在春的光艳中交舞着变。
+          你是四月早天里的云烟，
+          黄昏吹着风的软，星子在
+          无意中闪，细雨点洒在花前。
+          那轻，那娉婷，你是，鲜妍。
+          百花的冠冕你戴着，你是
+          天真，庄严，你是夜夜的月圆。</p>
+      </section>
+    </div>
+    <div id="parasSanbox"></div>
 
-        <div class="mix category-3" data-value="5">
-          <section style="border: 2px dotted #4caf50; margin: 8px 14px; padding: 10px; border-radius: 14px;">
-            <p style="color: #34495e;line-height:16px;"><span style="float: left; color: #903; font-size: 2em; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px;margin-top: -20px;">我</span> 说你是人间的四月天；
-              笑响点亮了四面风；轻灵
-              在春的光艳中交舞着变。
-              你是四月早天里的云烟，
-              黄昏吹着风的软，星子在
-              无意中闪，细雨点洒在花前。
-              那轻，那娉婷，你是，鲜妍。
-              百花的冠冕你戴着，你是
-              天真，庄严，你是夜夜的月圆。</p>
-          </section>
-        </div>
-        <div id="parasSanbox"></div>
+    <div id="sandboxFollow"></div>
 
-        <div id="sandboxFollow"></div>
+    <div id="sandboxHr"></div>
+    <div class="mix category-6" data-value="5" style="width: 310px;">
+      <section
+        style="background:#ecf0f1; text-align: left;border-style: none; width: 310px;overflow: hidden;margin:1em auto 0;line-height: 14px;">
+        <span style="float: left;padding: 3px;border: 1px solid #bfbfbf;"><img src="./styles/images/avatar.jpg"
+                                                                               style="width: 128px;height: 128px"></span>
 
-        <div id="sandboxHr"></div>
-        <div class="mix category-6" data-value="5" style="width: 310px;">
-          <section style="background:#ecf0f1; text-align: left;border-style: none; width: 310px;overflow: hidden;margin:1em auto 0;line-height: 14px;">
-            <span style="float: left;padding: 3px;border: 1px solid #bfbfbf;"><img src="./styles/images/avatar.jpg" style="width: 128px;height: 128px"></span>
-            <p style="display:inline;color:#34495e;font-size: 14px;">THE ONLY FAIR IS NOT FAIRENJOY CREATE & SHARE</p>
-          </section>
-        </div>
-        <div class="mix category-6" data-value="5" style="width: 310px;">
-          <section style="background:#ecf0f1; text-align: left;border-style: none; width: 310px;overflow: hidden;margin:1em auto 0;line-height: 14px;">
-            <p style="color:#34495e;font-size: 14px;width: 174px;float: left;">THE ONLY FAIR IS NOT FAIRENJOY CREATE & SHARE</p>
-            <span style="display:inline;float: right;padding: 3px;border: 1px solid #bfbfbf;"><img src="./styles/images/avatar.jpg" style="width: 128px;height: 128px"></span>
-          </section>
-        </div>
+        <p style="display:inline;color:#34495e;font-size: 14px;">THE ONLY FAIR IS NOT FAIRENJOY CREATE & SHARE</p>
+      </section>
+    </div>
+    <div class="mix category-6" data-value="5" style="width: 310px;">
+      <section
+        style="background:#ecf0f1; text-align: left;border-style: none; width: 310px;overflow: hidden;margin:1em auto 0;line-height: 14px;">
+        <p style="color:#34495e;font-size: 14px;width: 174px;float: left;">THE ONLY FAIR IS NOT FAIRENJOY CREATE &
+          SHARE</p>
+        <span style="display:inline;float: right;padding: 3px;border: 1px solid #bfbfbf;"><img
+          src="./styles/images/avatar.jpg" style="width: 128px;height: 128px"></span>
+      </section>
+    </div>
 
-        <div class="mix category-7" data-value="5">
-          <section style='background: #f9f9f9;border-left: 10px solid #ccc;margin: 1em;padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019";'>
-            <section style=" color: #ccc;content: open-quote;font-size: 4em;line-height: 0.1em;margin-right: 0.25em;vertical-align: -0.4em;"></section>
-            <p style="display: inline;color: #4caf50; font-size: 14px;">标题</p>
-          </section>
-          <section style="border: 1px solid #4caf50; margin: 0 14px; padding: 10px;">
-            <p style="font-size: 14px;color:#34495e;">段落啦啦</p>
-          </section>
-        </div>
-      </div>
+    <div class="mix category-7" data-value="5">
+      <section
+        style='background: #f9f9f9;border-left: 10px solid #ccc;margin: 1em;padding: 0.5em 10px; quotes: "\201C""\201D""\2018""\2019";'>
+        <section
+          style=" color: #ccc;content: open-quote;font-size: 4em;line-height: 0.1em;margin-right: 0.25em;vertical-align: -0.4em;"></section>
+        <p style="display: inline;color: #4caf50; font-size: 14px;">标题</p>
+      </section>
+      <section style="border: 1px solid #4caf50; margin: 0 14px; padding: 10px;">
+        <p style="font-size: 14px;color:#34495e;">段落啦啦</p>
+      </section>
+    </div>
   </div>
+</div>
 </div>
 <div id="editor">
     <textarea name="congee" id="congee" rows="10" cols="80">
@@ -92,15 +104,15 @@
 <script src="ckeditor/plugins/autosave/js/moment.js"></script>
 <script data-main="scripts/main" src="scripts/libs/require.js"></script>
 
- <!--Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+<!--Google Analytics: change UA-XXXXX-X to be your site's ID.-->
 <!--<script>-->
-  <!--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
-      <!--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
-    <!--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
-  <!--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
+<!--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){-->
+<!--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),-->
+<!--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)-->
+<!--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');-->
 
-  <!--ga('create', 'UA-69548046-1', 'auto');-->
-  <!--ga('send', 'pageview');-->
+<!--ga('create', 'UA-69548046-1', 'auto');-->
+<!--ga('send', 'pageview');-->
 <!--</script>-->
 </body>
 </html>

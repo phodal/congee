@@ -6,7 +6,7 @@ CKEDITOR.plugins.add("clearall",
       editor.addCommand('clearall', {
         modes: {wysiwyg: 1, source: 1},
         exec: function (editor) {
-          editor.setData( '' );
+          editor.setData('');
         },
         canUndo: false
       });

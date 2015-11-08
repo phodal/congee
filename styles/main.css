@@ -117,7 +117,6 @@ button.active {
   transform: rotate(45deg);
 }
 
-
 .sandbox .mix.category-1:after {
   border-right-color: #4caf50;
 }
@@ -125,7 +124,6 @@ button.active {
 .sandbox .mix.category-2:after {
   border-right-color: #03a9f4;
 }
-
 
 .sandbox .gap,
 .sandbox .mix {
