@@ -31,15 +31,16 @@ Kanban：[![Stories in Ready](https://badge.waffle.io/phodal/congee.svg?label=re
 - jQuery Mixitup
 - Spectrum (ColorPicker)
 
-###Test Stack (TBD)
+###Test Stack
 
-- PhantomJS(TBD)
-- QUnit / Jasmine (TBD)
-- ES6 & ESLint (TBD)
+- Mocha
+- RequireJS
 
 Browser: Chrome / Firefox / IE8 +
 
 ##Todo
+
+- Preview for Screen
 
 See in: [http://waffle.io/phodal/congee](http://waffle.io/phodal/congee)
 
