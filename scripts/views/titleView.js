@@ -1,6 +1,5 @@
 define(['ractive', 'text!views/titles/list.html'], function (Ractive, titleTemplate) {
   'use strict';
-  'use strict';
   var titleView = null;
 
   var app = {
