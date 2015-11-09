@@ -20,6 +20,7 @@ define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'j
       config.extraPlugins = 'floating-tools,notification,autosave,templates,wordcount,' +
         'clipboard,pastefromword,smiley,dialog,music,preview,selectall,clearall';
       config.height = 637;
+      config.enterMode = CKEDITOR.ENTER_DIV;
 
       config.wordcount = {
         showParagraphs: true,
@@ -34,7 +35,7 @@ define(['jquery', 'ckeditor', 'ckeditor', 'jquery.mixitup', 'jquery.pwstabs', 'j
         {name: 'super', items: ['Smiley', 'RemoveFormat']},
         {
           name: 'basicstyles',
-          items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript']
+          items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', 'CreateDiv']
         },
         {
           name: 'paragraph',
