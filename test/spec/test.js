@@ -53,14 +53,15 @@ requirejs.config({
 });
 
 describe('Basic Test', function () {
-  var hrView, config = {
+  var hrView, parasView, config = {
     'defaultColor': '#4caf50',
     'defaultFontSize': '20px'
   };
 
   before(function (done) {
-    requirejs(['scripts/views/hrView'], function (HRView) {
+    requirejs(['scripts/views/hrView', 'scripts/views/parasView' ], function (HRView, ParasView) {
       hrView = HRView.init(config);
+      parasView = ParasView.init(config);
       done();
     });
   });
@@ -76,6 +77,17 @@ describe('Basic Test', function () {
       hrView.fire('changeColor', {color: '#fff'});
       var section = hrView.findComponent('Grid').get('styles.2');
       section.color.should.equal('#fff');
+    });
+  });
+
+  describe('Basic Paras View Test', function () {
+    it('should return correctly color', function () {
+      parasView.findComponent('Grid').set('Style.*.p_style', "font-size:15px;");
+      var section = parasView.findComponent('Grid').get('styles.1');
+      section.color.should.equal(config.defaultColor);
+      section.p_style.should.equal('font-size:15px;');
+      parasView.findComponent('Grid').set('Style.*.color', "#fff");
+      section.color.should.equal("#fff");
     });
   });
 });
