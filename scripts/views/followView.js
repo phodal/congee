@@ -1,4 +1,4 @@
-define(['ractive', 'text!views/follow/list.html'], function (Ractive, followTemplate) {
+define(['ractive', 'text!templates/follow/list.html'], function (Ractive, followTemplate) {
   'use strict';
   var followView = null;
 

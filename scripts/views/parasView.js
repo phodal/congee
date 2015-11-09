@@ -1,4 +1,4 @@
-define(['ractive', 'text!views/paras/list.html'], function (Ractive, parasTemplate) {
+define(['ractive', 'text!templates/paras/list.html'], function (Ractive, parasTemplate) {
   'use strict';
   var parasView = null;
 

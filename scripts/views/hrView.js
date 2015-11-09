@@ -1,4 +1,4 @@
-define(['ractive', 'text!views/hr/list.html'], function (Ractive, hrTemplate) {
+define(['ractive', 'text!templates/hr/list.html'], function (Ractive, hrTemplate) {
   'use strict';
   var parasView = null;
 
@@ -47,7 +47,7 @@ define(['ractive', 'text!views/hr/list.html'], function (Ractive, hrTemplate) {
     },
 
     toStyle: function(data){
-      
+
     }
   };
 
